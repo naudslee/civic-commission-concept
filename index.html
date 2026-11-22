@@ -145,16 +145,57 @@
     <p>The commission is advisory only. All decisions stay with the City Council.</p>
 
     <h2 id="ideas">Submit an idea</h2>
-    <p>Every idea gets read. Good ones are worked into a plan and brought to the Council. If an idea isn't a fit, we'll tell you why.</p>
-    <p>We ask for your address only to confirm you live in Plymouth. Please note that submissions may be public records.</p>
-    <iframe class="form-frame"
-            src="PASTE_IDEA_FORM_EMBED_LINK_HERE"
-            title="Idea submission form">
-    </iframe>
-    <p><a href="PASTE_IDEA_FORM_LINK_HERE" target="_blank" rel="noopener">Open the idea form in a new tab</a></p>
+    <p>We want to hear your ideas and opinions on happenings in the City of Plymouth!</p>
+    <p>We ask for your address only to confirm you live in Plymouth, it will not be shared publicly. Please note that submissions may be public records.</p>
+      <form id="idea-form" class="demo-form" novalidate>
+      <p class="form-note">Example form. Submissions are turned off on this concept site.</p>
+
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required aria-required="true">
+      </div>
+
+      <div class="field">
+        <label for="address">Street address in Plymouth</label>
+        <input id="address" name="address" type="text" autocomplete="street-address" aria-describedby="address-help">
+        <p id="address-help" class="help">Used only to confirm you live in Plymouth.</p>
+      </div>
+
+      <div class="field">
+        <label for="contact">Email or phone <span class="optional">(optional)</span></label>
+        <input id="contact" name="contact" type="text" autocomplete="email" aria-describedby="contact-help">
+        <p id="contact-help" class="help">Only if you'd like a reply.</p>
+      </div>
+
+      <div class="field">
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option>Events and community activities</option>
+          <option>Parks and public spaces</option>
+          <option>Main Street and local business</option>
+          <option>How the City shares information</option>
+          <option>Something else</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="idea">Your idea</label>
+        <textarea id="idea" name="idea" rows="6" required aria-required="true"></textarea>
+      </div>
+
+      <fieldset class="field">
+        <legend>Would you be willing to help with this idea?</legend>
+        <label class="inline"><input type="radio" name="help" value="yes"> Yes</label>
+        <label class="inline"><input type="radio" name="help" value="maybe"> Maybe</label>
+        <label class="inline"><input type="radio" name="help" value="no" checked> No, just sharing</label>
+      </fieldset>
+
+      <button type="submit">Submit idea</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
 
     <h2 id="volunteer">Volunteer</h2>
-    <p>Public Works has a small crew covering a lot of ground. Volunteers help with the small jobs so staff can focus on the bigger ones:</p>
+    <p>Looking for Volunteer opportunities? Our Volunteer group assists with:</p>
     <ul>
       <li>Cleanup after storms in parks, sidewalks, and public areas</li>
       <li>Event setup, takedown, and cleanup</li>
