@@ -7,101 +7,102 @@
 <meta name="description" content="Concept site for a proposed Civic Engagement Commission in Plymouth, California.">
 <style>
   :root {
-    --silver: #c4c8cc;
-    --silver-light: #eef0f2;
-    --charcoal: #2b3035;
-    --text: #1f2328;
-    --muted: #4a5057;
-    --link: #1d4f7a;
-    --white: #ffffff;
-    --focus: #b35c00;
+    --navy: #1c3a5e;
+    --navy-dark: #142b46;
+    --blue: #1f5fa3;
+    --silver: #d5d9de;
+    --silver-light: #f1f3f5;
+    --text: #222;
+    --muted: #555;
+    --focus: #f2b632;
   }
   * { box-sizing: border-box; }
-  html { font-size: 100%; }
   body {
     margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    font-size: 1.0625rem;
-    line-height: 1.6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.55;
     color: var(--text);
-    background: var(--white);
+    background: #fff;
   }
-  a { color: var(--link); text-underline-offset: 2px; }
-  a:hover { text-decoration-thickness: 2px; }
+  a { color: var(--blue); }
+  a:hover { color: var(--navy-dark); }
   :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
   .skip-link {
-    position: absolute; left: 1rem; top: -3rem;
-    background: var(--charcoal); color: var(--white);
-    padding: .5rem 1rem; border-radius: 4px; z-index: 10;
+    position: absolute; left: .5rem; top: -3rem;
+    background: #fff; color: var(--navy); padding: .4rem .8rem; z-index: 10;
   }
-  .skip-link:focus { top: 1rem; }
+  .skip-link:focus { top: .5rem; }
 
   .concept-banner {
-    background: #fff4d6; color: #4d3800;
-    border-bottom: 1px solid #e0c46c;
-    padding: .5rem 1rem; text-align: center; font-size: .95rem;
+    background: #fff6dc; color: #4d3800;
+    font-size: .9rem; text-align: center; padding: .4rem 1rem;
+    border-bottom: 1px solid #e4cf8f;
   }
 
-  header {
-    background: var(--silver-light);
-    border-bottom: 4px solid var(--silver);
-  }
-  .header-inner, main, .footer-inner {
-    max-width: 60rem; margin: 0 auto; padding: 0 1.25rem;
-  }
-  .header-inner {
-    display: flex; align-items: center; gap: 1rem;
-    padding-top: 1.25rem; padding-bottom: 1rem;
-  }
-  .emblem-placeholder {
-    flex: 0 0 auto; width: 72px; height: 72px; border-radius: 50%;
-    border: 2px dashed var(--muted); color: var(--muted);
-    display: flex; align-items: center; justify-content: center;
-    text-align: center; font-size: .7rem; line-height: 1.2; padding: .25rem;
-  }
-  .site-title { margin: 0; font-size: 1.5rem; line-height: 1.25; font-weight: 700; }
-  .site-subtitle { margin: .15rem 0 0; color: var(--muted); font-size: 1rem; }
+  .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1rem; }
 
-  nav ul {
-    list-style: none; margin: 0; padding: 0 0 1rem;
-    display: flex; flex-wrap: wrap; gap: .5rem 1.25rem;
+  header { background: var(--navy); color: #fff; }
+  .masthead { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; }
+  .seal {
+    width: 84px; height: 84px; flex: 0 0 auto;
+    background: #fff; border-radius: 50%; padding: 4px;
   }
-  nav a { font-weight: 600; text-decoration: none; padding: .25rem 0; display: inline-block; }
-  nav a:hover { text-decoration: underline; }
-
-  main { padding-top: 1.5rem; padding-bottom: 2rem; }
-  section { padding: 1.25rem 0 1.75rem; border-bottom: 1px solid var(--silver); }
-  section:last-of-type { border-bottom: none; }
-  h1 { font-size: 1.6rem; margin: 0 0 .5rem; }
-  h2 { font-size: 1.4rem; margin: 0 0 .5rem; }
-  h3 { font-size: 1.15rem; margin: 1.25rem 0 .4rem; }
-
-  .card {
-    background: var(--silver-light); border: 1px solid var(--silver);
-    border-radius: 8px; padding: 1rem 1.25rem; margin: 1rem 0;
+  .site-name {
+    margin: 0; font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.6rem; font-weight: normal; line-height: 1.2;
   }
-  .button {
-    display: inline-block; background: var(--charcoal); color: var(--white);
-    padding: .6rem 1.1rem; border-radius: 6px; text-decoration: none; font-weight: 600;
+  .site-place { margin: .2rem 0 0; font-size: .95rem; color: #d9e3ee; }
+
+  nav { background: var(--silver-light); border-bottom: 1px solid var(--silver); }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+  nav a {
+    display: block; padding: .65rem .9rem; color: var(--navy);
+    text-decoration: none; font-size: .95rem;
   }
-  .button:hover { background: #111417; }
+  nav a:hover { background: #e2e6ea; text-decoration: underline; }
+  nav li:first-child a { padding-left: 0; }
 
-  .form-frame {
-    width: 100%; height: 900px; border: 1px solid var(--silver); border-radius: 8px;
+  .layout { display: flex; gap: 2.5rem; padding: 1.5rem 0 2rem; }
+  main { flex: 1 1 auto; min-width: 0; }
+  aside { flex: 0 0 15rem; font-size: .95rem; }
+
+  h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal; color: var(--navy); line-height: 1.25;
   }
+  h1 { font-size: 1.75rem; margin: 0 0 .6rem; }
+  h2 {
+    font-size: 1.35rem; margin: 2rem 0 .5rem;
+    padding-bottom: .25rem; border-bottom: 1px solid var(--silver);
+  }
+  h3 { font-size: 1.1rem; margin: 1.2rem 0 .3rem; }
 
-  table { width: 100%; border-collapse: collapse; margin: .75rem 0; }
-  caption { text-align: left; font-weight: 600; padding-bottom: .4rem; }
-  th, td { text-align: left; padding: .55rem .6rem; border-bottom: 1px solid var(--silver); }
-  thead th { background: var(--silver-light); }
+  .events { list-style: none; padding: 0; margin: .5rem 0; }
+  .events li { padding: .45rem 0; border-bottom: 1px dotted var(--silver); }
+  .events .date { display: inline-block; min-width: 7.5rem; font-weight: bold; color: var(--navy); }
 
-  footer { background: var(--charcoal); color: var(--white); margin-top: 1rem; }
-  .footer-inner { padding-top: 1.25rem; padding-bottom: 1.5rem; font-size: .95rem; }
-  footer a { color: #cfe3f5; }
+  .form-frame { width: 100%; height: 900px; border: 1px solid var(--silver); }
 
-  @media (max-width: 36rem) {
-    .header-inner { flex-direction: column; align-items: flex-start; }
+  table { width: 100%; border-collapse: collapse; margin: .5rem 0; font-size: .95rem; }
+  caption { text-align: left; color: var(--muted); padding-bottom: .3rem; }
+  th, td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid var(--silver); }
+  th { color: var(--navy); font-weight: bold; }
+
+  aside h2 { font-size: 1.1rem; margin-top: 0; }
+  aside section + section h2 { margin-top: 1.5rem; }
+  aside p { margin: .3rem 0; }
+
+  footer { background: var(--navy-dark); color: #e6ecf2; font-size: .9rem; }
+  footer .wrap { padding-top: 1rem; padding-bottom: 1.2rem; }
+  footer a { color: #ffffff; }
+
+  @media (max-width: 44rem) {
+    .layout { flex-direction: column; gap: 1rem; }
+    aside { flex-basis: auto; border-top: 1px solid var(--silver); padding-top: 1rem; }
+    .seal { width: 64px; height: 64px; }
+    .site-name { font-size: 1.3rem; }
     .form-frame { height: 1100px; }
   }
 </style>
@@ -115,79 +116,68 @@
 </div>
 
 <header>
-  <div class="header-inner">
-    <!-- Replace this placeholder with the official seal once the City approves its use:
-         <img src="emblem.png" alt="City of Plymouth seal" width="72" height="72" style="flex:0 0 auto;border-radius:50%;"> -->
-    <div class="emblem-placeholder" aria-hidden="true">City emblem</div>
+  <div class="wrap masthead">
+    <img class="seal" src="emblem.png" alt="City of Plymouth seal" width="84" height="84">
     <div>
-      <p class="site-title">Plymouth Civic Engagement Commission</p>
-      <p class="site-subtitle">Helping residents stay informed and be heard</p>
+      <p class="site-name">Plymouth Civic Engagement Commission</p>
+      <p class="site-place">Plymouth, California</p>
     </div>
   </div>
-  <nav class="header-inner" aria-label="Main" style="padding-top:0">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#ideas">Submit an idea</a></li>
-      <li><a href="#volunteer">Volunteer</a></li>
-      <li><a href="#meetings">Meetings</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
 </header>
 
-<main id="main" tabindex="-1">
-
-  <section id="home" aria-labelledby="home-heading">
-    <h1 id="home-heading">Welcome</h1>
-    <p>The Civic Engagement Commission helps the City hear from more residents, including people who can't make it to evening meetings. Share an idea, sign up to volunteer, or see what's coming up.</p>
-
-    <div class="card">
-      <h2>Next commission meeting</h2>
-      <p><strong>[Date]</strong> at <strong>[Time]</strong><br>
-         Plymouth City Hall, 9426 Main Street, Plymouth, CA 95669</p>
-      <p><a href="#meetings">See agendas and past minutes</a></p>
-    </div>
-
-    <h2>Upcoming events</h2>
+<nav aria-label="Main">
+  <div class="wrap">
     <ul>
-      <li><strong>[Date]</strong>: [Event name and short description]</li>
-      <li><strong>[Date]</strong>: [Event name and short description]</li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#ideas">Submit an idea</a></li>
+      <li><a href="#volunteer">Volunteer</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#meetings">Agendas and minutes</a></li>
     </ul>
-  </section>
+  </div>
+</nav>
 
-  <section id="ideas" aria-labelledby="ideas-heading">
-    <h2 id="ideas-heading">Submit an idea</h2>
-    <p>Have an idea for Plymouth? The commission reviews every submission. Promising ideas are developed and brought to the City Council. If an idea isn't a good fit, you'll get an honest answer.</p>
-    <p>We ask for your address only to confirm you live in Plymouth. Submissions may be public records.</p>
+<div class="wrap layout">
+  <main id="main" tabindex="-1">
+
+    <h1 id="about">Have a say in what happens in Plymouth</h1>
+    <p>Not everyone can make it to a 6:30 meeting. The Civic Engagement Commission is a five-member advisory group that helps the City hear from more residents. We collect ideas, run surveys, and organize volunteers, then bring what we learn to the City Council.</p>
+    <p>The commission is advisory only. All decisions stay with the City Council.</p>
+
+    <h2 id="ideas">Submit an idea</h2>
+    <p>Every idea gets read. Good ones are worked into a plan and brought to the Council. If an idea isn't a fit, we'll tell you why.</p>
+    <p>We ask for your address only to confirm you live in Plymouth. Please note that submissions may be public records.</p>
     <iframe class="form-frame"
             src="PASTE_IDEA_FORM_EMBED_LINK_HERE"
             title="Idea submission form">
     </iframe>
-    <p><a class="button" href="PASTE_IDEA_FORM_LINK_HERE" target="_blank" rel="noopener">Open the idea form in a new tab</a></p>
-  </section>
+    <p><a href="PASTE_IDEA_FORM_LINK_HERE" target="_blank" rel="noopener">Open the idea form in a new tab</a></p>
 
-  <section id="volunteer" aria-labelledby="volunteer-heading">
-    <h2 id="volunteer-heading">Volunteer</h2>
-    <p>Join our volunteer list and we'll reach out when the City needs extra hands. Volunteers help with:</p>
+    <h2 id="volunteer">Volunteer</h2>
+    <p>Public Works has a small crew covering a lot of ground. Volunteers help with the small jobs so staff can focus on the bigger ones:</p>
     <ul>
       <li>Cleanup after storms in parks, sidewalks, and public areas</li>
-      <li>Setting up, taking down, and cleaning up after events</li>
+      <li>Event setup, takedown, and cleanup</li>
       <li>Litter pickup, weeding, planting, and watering</li>
       <li>Holiday decorating and painting over minor graffiti</li>
       <li>Handing out flyers and helping with surveys</li>
     </ul>
-    <p>Volunteers only do simple, safe tasks. Everyone signs in and signs a waiver at each event.</p>
-    <p><a class="button" href="PASTE_VOLUNTEER_FORM_LINK_HERE" target="_blank" rel="noopener">Sign up to volunteer (opens in a new tab)</a></p>
-  </section>
+    <p>Volunteers only do simple, safe tasks and sign in at each event.
+       <a href="PASTE_VOLUNTEER_FORM_LINK_HERE" target="_blank" rel="noopener">Join the volunteer list (opens in a new tab)</a></p>
 
-  <section id="meetings" aria-labelledby="meetings-heading">
-    <h2 id="meetings-heading">Meetings</h2>
+    <h2 id="events">Upcoming events</h2>
+    <ul class="events">
+      <li><span class="date">[Date]</span> [Event name and short description]</li>
+      <li><span class="date">[Date]</span> [Event name and short description]</li>
+    </ul>
+
+    <h2 id="meetings">Agendas and minutes</h2>
     <p>Meetings are open to the public and follow the Brown Act. Agendas are posted at least 72 hours before each regular meeting.</p>
     <table>
-      <caption>Agendas and minutes</caption>
+      <caption>Commission meetings</caption>
       <thead>
         <tr>
-          <th scope="col">Meeting date</th>
+          <th scope="col">Date</th>
           <th scope="col">Agenda</th>
           <th scope="col">Minutes</th>
         </tr>
@@ -200,29 +190,30 @@
         </tr>
       </tbody>
     </table>
-  </section>
 
-  <section id="about" aria-labelledby="about-heading">
-    <h2 id="about-heading">About the commission</h2>
-    <p>The Civic Engagement Commission is a five-member advisory body. Each City Council member appoints one commissioner. The commission makes recommendations; all decisions stay with the City Council.</p>
-    <h3>Commissioners</h3>
-    <ul>
-      <li>[Name], Chair</li>
-      <li>[Name]</li>
-      <li>[Name]</li>
-      <li>[Name]</li>
-      <li>[Name]</li>
-    </ul>
-    <h3>Contact</h3>
-    <p>Email: <a href="mailto:civiccommission@example.gov">civiccommission@example.gov</a> (placeholder)</p>
-  </section>
+  </main>
 
-</main>
+  <aside aria-label="Meeting and contact information">
+    <section>
+      <h2>Next meeting</h2>
+      <p><strong>[Date], [Time]</strong></p>
+      <p>Plymouth City Hall<br>9426 Main Street<br>Plymouth, CA 95669</p>
+    </section>
+    <section>
+      <h2>Commissioners</h2>
+      <p>[Name], Chair<br>[Name]<br>[Name]<br>[Name]<br>[Name]</p>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <p><a href="mailto:civiccommission@example.gov">civiccommission@example.gov</a><br>(placeholder)</p>
+    </section>
+  </aside>
+</div>
 
 <footer>
-  <div class="footer-inner">
+  <div class="wrap">
     <p>Concept site prepared by a Plymouth resident for the City Council's review.</p>
-    <p>Need this information in another format? Contact <a href="mailto:civiccommission@example.gov">civiccommission@example.gov</a>.</p>
+    <p>Need this information in another format? Email <a href="mailto:civiccommission@example.gov">civiccommission@example.gov</a>.</p>
   </div>
 </footer>
 
