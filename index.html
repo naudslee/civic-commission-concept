@@ -62,14 +62,9 @@
 
   nav { background: var(--silver-light); border-bottom: 1px solid var(--silver); }
   nav ul {
-    margin-left: -.55rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    list-style: none; margin: 0 0 0 -.9rem; padding: 0;
+    display: flex; flex-wrap: wrap;
   }
-    nav ul::-webkit-scrollbar { display: none; }
-    nav a { padding: .6rem .55rem; font-size: .9rem; white-space: nowrap; }
   nav a {
     display: block; padding: .65rem .9rem; color: var(--navy);
     text-decoration: none; font-size: .95rem;
@@ -145,8 +140,15 @@
     .seal { width: 64px; height: 64px; }
     .site-name { font-size: 1.25rem; }
     .site-place { font-size: .85rem; }
-    nav ul { margin-left: -.6rem; }
-    nav a { padding: .55rem .6rem; font-size: .9rem; }
+    nav ul {
+      margin-left: -.55rem;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    nav ul::-webkit-scrollbar { display: none; }
+    nav a { padding: .6rem .55rem; font-size: .9rem; white-space: nowrap; }
     .layout { flex-direction: column; gap: 1.5rem; padding-top: 1.25rem; padding-bottom: 1.5rem; }
     aside { flex-basis: auto; border-top: 1px solid var(--silver); padding-top: 1.25rem; }
     h1 { font-size: 1.45rem; }
@@ -320,6 +322,9 @@
     this.reset();
   });
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
