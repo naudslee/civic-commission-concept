@@ -46,12 +46,12 @@
   header { background: var(--navy); color: #fff; }
   .masthead { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; }
   .seal {
-    width: 84px; height: 84px; flex: 0 0 auto;
-    background: #fff; border-radius: 50%; padding: 4px;
+    width: 96px; height: 96px; flex: 0 0 auto;
+    background: #fff; border-radius: 50%; overflow: hidden;
   }
-  .site-name {
-    margin: 0; font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.6rem; font-weight: normal; line-height: 1.2;
+  .seal img {
+    width: 100%; height: 100%; display: block;
+    transform: scale(1.38);
   }
   .site-place { margin: .2rem 0 0; font-size: .95rem; color: #d9e3ee; }
 
@@ -117,7 +117,7 @@
 
 <header>
   <div class="wrap masthead">
-    <img class="seal" src="emblem.png" alt="City of Plymouth seal" width="84" height="84">
+    <div class="seal"><img src="emblem.png" alt="City of Plymouth seal" width="96" height="96"></div>
     <div>
       <p class="site-name">Plymouth Civic Engagement Commission</p>
       <p class="site-place">Plymouth, California</p>
